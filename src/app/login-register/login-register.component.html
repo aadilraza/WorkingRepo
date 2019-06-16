@@ -1,0 +1,142 @@
+<!-- Titlebar
+================================================== -->
+<div id="titlebar">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+
+				<h2>Log In & Register</h2>
+				
+				<!-- Breadcrumbs -->
+				<nav id="breadcrumbs">
+					<ul>
+						<li><a href="#">Home</a></li>
+						<li>Log In & Register</li>
+					</ul>
+				</nav>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!-- Contact
+================================================== -->
+
+<!-- Container -->
+<div class="container">
+
+	<div class="row">
+	<div class="col-md-4 col-md-offset-4">
+
+	<button class="button social-login via-twitter"><i class="fa fa-twitter"></i> Log In With Twitter</button>
+	<button class="button social-login via-gplus"><i class="fa fa-google-plus"></i> Log In With Google Plus</button>
+	<button class="button social-login via-facebook"><i class="fa fa-facebook"></i> Log In With Facebook</button>
+
+	<!--Tab -->
+	<div class="my-account style-1 margin-top-5 margin-bottom-40">
+
+		<ul class="tabs-nav">
+			<li class=""><a href="#tab1">Log In</a></li>
+			<li><a href="#tab2">Register</a></li>
+		</ul>
+
+		<div class="tabs-container alt">
+
+			<!-- Login -->
+			<div class="tab-content" id="tab1" style="display: none;">
+                <form class="login" (ngSubmit)="login()">
+                    <p class="form-row form-row-wide">
+                        <label for="username">
+                            Username:
+                            <i class="im im-icon-Male"></i>
+                            <input type="text" class="input-text" name="username" [(ngModel)]="model.username" id="username" value="" />
+                        </label>
+                    </p>
+                    <p class="form-row form-row-wide">
+                        <label for="password">
+                            Password:
+                            <i class="im im-icon-Lock-2"></i>
+                            <input class="input-text" type="password" name="password" [(ngModel)]="model.password" id="password" />
+                        </label>
+                    </p>
+                    <p class="form-row">
+                        <input type="submit" [disabled]="loading" class="button border margin-top-10" name="login" value="Login" />
+                        <label for="rememberme" class="rememberme">
+                            <input name="rememberme" type="checkbox" id="rememberme" value="forever" [(ngModel)]="model.rememberme" /> Remember Me
+                        </label>
+                    </p>
+                    <p class="lost_password">
+                        <a href="#">Lost Your Password?</a>
+                    </p>
+                    <img *ngIf="loading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+
+                    <div *ngIf="error" class="notification error closeable">
+                        <p><span>Error!</span> {{error}}</p>
+                        <a class="close" href="#"></a>
+                    </div>
+
+                </form>
+			</div>
+
+			<!-- Register -->
+			<div class="tab-content" id="tab2" style="display: none;">
+
+                <form class="register" (ngSubmit)="Register()">
+
+                    <p class="form-row form-row-wide">
+                        <label for="username2">
+                            Username:
+                            <i class="im im-icon-Male"></i>
+                            <input type="text" class="input-text" [(ngModel)]="Registration.RegUserName" name="RegUserName" id="RegUserName" value="" />
+                        </label>
+                    </p>
+
+                    <p class="form-row form-row-wide">
+                        <label for="email2">
+                            Email Address:
+                            <i class="im im-icon-Mail"></i>
+                            <input type="text" class="input-text" [(ngModel)]="Registration.RegEmail" name="RegEmail" id="RegEmail" value="" />
+                        </label>
+                    </p>
+                    <p class="form-row form-row-wide">
+                        <label for="password1">
+                            Password:
+                            <i class="im im-icon-Lock-2"></i>
+                            <input class="input-text" type="password" [(ngModel)]="Registration.RegPassword" name="RegPassword" id="RegPassword" />
+                        </label>
+                    </p>
+                    <p class="form-row form-row-wide">
+                        <label for="password2">
+                            Repeat Password:
+                            <i class="im im-icon-Lock-2"></i>
+                            <input class="input-text" type="password" [(ngModel)]="Registration.RegConfirmPassword" name="RegConfirmPassword" id="RegConfirmPassword" />
+                        </label>
+                    </p>
+                    <p class="form-row">
+                        <input type="submit" class="button border fw margin-top-10" name="register" value="Register" />
+                    </p>
+
+                    <div *ngIf="Registration_Error" class="notification error closeable">
+                        <p><span>Error!</span> {{Registration_Error}}</p>
+                        <a class="close" href="#"></a>
+                    </div>
+
+                    <div *ngIf="Registration_Message" class="notification success closeable">
+                        <p><span>Success!</span> {{Registration_Message}}</p>
+                        <a class="close" href="#"></a>
+                    </div>
+                </form>
+			</div>
+
+		</div>
+	</div>
+
+
+
+	</div>
+	</div>
+
+</div>
+<!-- Container / End -->

@@ -1,0 +1,102 @@
+<nav id="navigation" class="style-1">
+    <ul id="responsive">
+        <li>
+            <a class="current" href="#">Home</a>
+            <ul>
+                <li><a [routerLink]="'/index-2'">Home 1</a></li>
+                <li><a [routerLink]="'/index-3'">Home 2</a></li>
+                <li><a [routerLink]="'/index-4'">Home 3</a></li>
+                <li><a [routerLink]="'/index-5'">Home 4</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">Listings</a>
+            <ul>
+                <li>
+                    <a href="#">List Layout</a>
+                    <ul>
+                        <li><a [routerLink]="'/listings-list-with-sidebar'">With Sidebar</a></li>
+                        <li><a [routerLink]="'/listings-list-with-map'">With Map</a></li>
+                        <li><a [routerLink]="'/listings-list-full-width'">Full Width</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Grid Layout</a>
+                    <ul>
+                        <li><a [routerLink]="'/listings-grid-standard-with-sidebar'">Standard With Sidebar</a></li>
+                        <li><a [routerLink]="'/listings-grid-compact-with-sidebar'">Compact With Sidebar</a></li>
+                        <li><a [routerLink]="'/listings-grid-with-map'">With Map</a></li>
+                        <li><a [routerLink]="'/listings-grid-full-width'">Full Width</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Half Map</a>
+                    <ul>
+                        <li><a [routerLink]="'/listings-half-map-list'">List Layout</a></li>
+                        <li><a [routerLink]="'/listings-half-map-grid-standard'">Grid Standard Layout</a></li>
+                        <li><a [routerLink]="'/listings-half-map-grid-compact'">Grid Compact Layout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">Features</a>
+            <ul>
+                <li>
+                    <a href="#">Single Properties</a>
+                    <ul>
+                        <li><a [routerLink]="'/single-property-page-1'">Property Style 1</a></li>
+                        <li><a [routerLink]="'/single-property-page-2'">Property Style 2</a></li>
+                        <li><a [routerLink]="'/single-property-page-3'">Property Style 3</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Search Styles</a>
+                    <ul>
+                        <li><a [routerLink]="'/index-2'">Home Search 1</a></li>
+                        <li><a [routerLink]="'/index-3'">Home Search 2</a></li>
+                        <li><a [routerLink]="'/index-4'">Home Search 3</a></li>
+                        <li><a [routerLink]="'/listings-list-full-width'">Advanced Style</a></li>
+                        <li><a [routerLink]="'/listings-list-with-sidebar'">Sidebar Search</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">My Account</a>
+                    <ul>
+                        <li><a [routerLink]="'/my-profile'">My Profile</a></li>
+                        <li><a [routerLink]="'/my-bookmarks'">Bookmarked Listings</a></li>
+                        <li><a [routerLink]="'/my-properties'">My Properties</a></li>
+                        <li><a [routerLink]="'/change-password'">Change Password</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Agencies & Agents</a>
+                    <ul>
+                        <li><a [routerLink]="'/agencies-list'">Agencies List</a></li>
+                        <li><a [routerLink]="'/agency-page'">Agency Page</a></li>
+                        <li><a [routerLink]="'/agents-list'">Agents List</a></li>
+                        <li><a [routerLink]="'/agent-page'">Agent Page</a></li>
+                    </ul>
+                </li>
+                <li><a [routerLink]="'/compare-properties'">Compare Properties</a></li>
+                <li><a [routerLink]="'/submit-property'">Submit Property</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">Pages</a>
+            <ul>
+                <li>
+                    <a [routerLink]="'/blog'">Blog</a>
+                    <ul>
+                        <li><a [routerLink]="'/blog'">Blog</a></li>
+                        <li><a [routerLink]="'/blog-post'">Blog Post</a></li>
+                    </ul>
+                </li>
+                <li><a [routerLink]="'/contact'">Contact</a></li>
+                <li><a href="#">Elements</a></li> 
+                <!-- [routerLink]="'/elements' -->
+                <li><a [routerLink]="'/pricing-tables'">Pricing Tables</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
